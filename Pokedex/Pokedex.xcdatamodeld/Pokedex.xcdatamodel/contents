@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15A284" minimumToolsVersion="Automatic">
+    <entity name="Pokemons" representedClassName="Pokemons" syncable="YES">
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="male_female_ratio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="national_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="resource_uri" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pokemons_sprites" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Sprites" inverseName="sprites_pokemons" inverseEntity="Sprites" syncable="YES"/>
+    </entity>
+    <entity name="Sprites" representedClassName="Sprites" syncable="YES">
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resource_uri" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sprites_pokemons" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pokemons" inverseName="pokemons_sprites" inverseEntity="Pokemons" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Pokemons" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Sprites" positionX="-54" positionY="153" width="128" height="103"/>
+    </elements>
+</model>
